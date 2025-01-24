@@ -1,0 +1,2 @@
+[placeholders]
+db_type = { prompt = "Database type", choices = ["postgresql", "sqlite"], default = "sqlite", type = "string" }

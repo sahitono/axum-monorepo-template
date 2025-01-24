@@ -1,0 +1,7 @@
+{% if db_type == "postgresql" %}
+database_url = "postgresql://username:pwd@localhost:5437/{{project_name}}"
+{% else %}
+database_url = "sqlite://memory"
+{% endif %}
+jwt_secret = "ddca7ed3f8d15c04ac4b96623120172f14b470b3b5027857056a74f03023fe7516f6fdbbcd8d6c93abb9cfc7ff9e30885ac7c5c667eedb6f25426ee7cd201b4888e7a2b46318ca6cffafd47df232acb4023847e155767bb7bed0c3fd188497c5"
+jwt_expire = 604_800
