@@ -8,4 +8,4 @@ release:
 
 # run in dev mode pass config file location
 run_dev *ARGS:
-    cargo run --package {{project_name}} --bin {{project_name}} -- --config {{ ARGS }}
+    cargo run --package {{project-name}} --bin {{project_name}} -- --config {{ ARGS }}

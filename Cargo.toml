@@ -1,6 +1,4 @@
 [package]
-name = "{{project-name}}"
-version = "0.1.0"
 edition = "2021"
 authors = ["{{authors}}"]
 
@@ -19,7 +17,9 @@ geojson = { version = "0.24.1" }
 geozero = { version = "0.14.0", features = [
     "with-geojson",
     "with-wkb",
+    {% if db_type == "postgresql" %}
     "with-postgis-sqlx",
+    {% endif %}
 ] }
 geo-types = { version = "0.7.14", features = ["serde"] }
 lazy_static = "1.5.0"
